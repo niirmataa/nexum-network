@@ -1,20 +1,25 @@
 # Nexum Network
 
-Grant-ready project hub for the Nexum Network: post-quantum signing, local vaults, QR challenge flows, and privacy-preserving commerce integrations.
+Public project hub for the Nexum Network: post-quantum signing, local vaults, QR challenge flows, transport experiments, and commerce integration patterns.
 
-This repository is intentionally a public-facing coordination layer. It does not contain private keys, production secrets, deployment credentials, or unreleased customer data.
+This repository is a coordination and documentation layer. It keeps the system architecture, module status, security assumptions, and demo plan in one place without mixing unrelated implementation code into a single monorepo.
 
-## Vision
+## Scope
 
-Nexum Network aims to make strong cryptographic actions usable by ordinary users:
+Nexum Network explores a user-controlled signing model:
 
-- a user owns keys locally,
-- a website or service presents a challenge,
-- the user reviews the request on a trusted device,
-- the device signs the canonical challenge,
-- the service verifies the response without receiving private key material.
+1. A service creates a structured challenge.
+2. The user reviews the challenge on a trusted device.
+3. The device signs canonical JSON locally.
+4. The service verifies the response without receiving private key material.
 
-The initial focus is a Falcon-based QR signing vault for iOS, a Rust transport layer for secure node flows, and storefront integration patterns for privacy-preserving commerce.
+The current work focuses on:
+
+- an iOS vault for QR-based challenge signing,
+- Falcon signing and verification experiments,
+- browser/WASM verification,
+- Rust transport and node handshake prototypes,
+- storefront integration patterns.
 
 ## Current Modules
 
@@ -24,13 +29,13 @@ The initial focus is a Falcon-based QR signing vault for iOS, a Rust transport l
 | Core / Transport | https://github.com/niirmataa/nexum-core | Public, experimental, needs history sync and audit |
 | Falcon Research | https://github.com/niirmataa/free_falcon_sign | Public, research implementation |
 | Commerce Integration | https://github.com/niirmataa/e-commerce_shop_v1 | Public, local changes pending commit |
-| Falcon WASM | Local workspace only | Candidate package/repo, not published yet |
+| Falcon WASM | Local workspace only | Candidate standalone package |
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    Browser["Commerce / dApp Browser"]
+    Browser["Commerce / App Browser"]
     API["Nexum API Wrapper"]
     Vault["iOS Vault"]
     Core["Nexum Core Transport"]
@@ -45,33 +50,45 @@ flowchart LR
     Browser --> WASM
 ```
 
-## Grant Thesis
+## Engineering Principles
 
-Most identity and commerce flows still ask users to trust servers with too much authority. Nexum shifts high-value approvals to a device-local signing flow, where the user can inspect a human-readable challenge before signing.
+- Keep private keys device-local.
+- Make high-value approvals human-reviewable.
+- Sign deterministic canonical JSON, not ambiguous payloads.
+- Treat all QR input as untrusted.
+- Keep prototype, research, and production-ready labels explicit.
+- Prefer small, reviewable repositories over one overloaded code dump.
 
-Funding would accelerate:
+## Repository Roles
 
-- a documented QR challenge/response protocol,
-- audited canonical JSON signing,
-- production-grade mobile key storage,
-- open-source verifier libraries,
-- repeatable demos for commerce, escrow, and node authorization.
+This repository should answer:
 
-## Near-Term Deliverables
+- What is Nexum Network?
+- Which modules exist?
+- What is stable, experimental, or blocked?
+- How does the signing flow work?
+- What must be reviewed before production use?
+- What demo should be built next?
 
-1. Stabilize the public iOS vault repository and release a TestFlight-ready build.
+Implementation belongs in focused module repositories.
+
+## Near-Term Roadmap
+
+1. Stabilize the public iOS vault repository and prepare a real device build.
 2. Split Falcon WASM into a clean package with reproducible builds.
-3. Restore and test the full Rust workspace in `nexum-core`.
+3. Restore and test the intended Rust workspace in `nexum-core`.
 4. Convert storefront integration into a minimal public demo.
-5. Write a security review checklist before any production deployment.
+5. Write protocol test vectors for challenge and response verification.
+6. Prepare an external security review checklist before production use.
 
-## Important Security Note
+## Status
 
-This is not yet production-audited cryptography. Falcon integration, QR payload validation, canonical JSON, key storage, and transport authentication must be reviewed before production use.
+This is not a production-audited cryptographic system yet. Falcon integration, QR payload validation, canonical JSON, key storage, and transport authentication require review before production deployment.
 
 See:
 
-- [Security Model](docs/security-model.md)
-- [Grant Roadmap](docs/grant-roadmap.md)
+- [Product Brief](docs/product-brief.md)
+- [Roadmap](docs/roadmap.md)
 - [Repository Map](docs/repository-map.md)
+- [Security Model](docs/security-model.md)
 - [Demo Plan](docs/demo-plan.md)

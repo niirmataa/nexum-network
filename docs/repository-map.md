@@ -22,7 +22,7 @@ Snapshot date: 2026-06-17
 
 The project should avoid one giant repository. Instead:
 
-1. `nexum-network` - public grant/project hub.
+1. `nexum-network` - public project and protocol hub.
 2. `nexum-vault-ios` - mobile vault implementation.
 3. `nexum-core` - Rust protocol and transport.
 4. `free-falcon-wasm` - reproducible Falcon WASM package.

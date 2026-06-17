@@ -1,12 +1,12 @@
-# Grant Roadmap
+# Roadmap
 
 ## Milestone 0 - Public Project Hub
 
-Goal: Make the project understandable to reviewers.
+Goal: keep the project understandable, navigable, and technically honest.
 
 Deliverables:
 
-- project hub repository,
+- project overview,
 - product brief,
 - architecture overview,
 - repository map,
@@ -16,12 +16,12 @@ Deliverables:
 Acceptance criteria:
 
 - no secrets in repository,
-- all linked repositories have clear status,
-- risks are visible instead of hidden.
+- linked repositories have clear status,
+- known risks are visible instead of hidden.
 
 ## Milestone 1 - iOS Vault MVP
 
-Goal: Demonstrate QR challenge signing on a real iOS device.
+Goal: demonstrate QR challenge signing on a real iOS device.
 
 Deliverables:
 
@@ -41,7 +41,7 @@ Acceptance criteria:
 
 ## Milestone 2 - Falcon WASM Verifier
 
-Goal: Provide browser-side verification for demos and integrations.
+Goal: provide browser-side verification for demos and integrations.
 
 Deliverables:
 
@@ -58,7 +58,7 @@ Acceptance criteria:
 
 ## Milestone 3 - Rust Core Stabilization
 
-Goal: Restore a coherent and testable Rust workspace.
+Goal: restore a coherent and testable Rust workspace.
 
 Deliverables:
 
@@ -72,11 +72,11 @@ Acceptance criteria:
 
 - `cargo test` passes for intended workspace,
 - responder behavior is documented,
-- unsafe/FFI boundaries are explicit.
+- unsafe and FFI boundaries are explicit.
 
 ## Milestone 4 - Commerce Demo
 
-Goal: Show a user approving a checkout/login challenge with the vault.
+Goal: show a user approving a checkout or login challenge with the vault.
 
 Deliverables:
 
@@ -93,7 +93,7 @@ Acceptance criteria:
 
 ## Milestone 5 - Security Review Readiness
 
-Goal: Prepare the project for external review.
+Goal: prepare the project for external technical review.
 
 Deliverables:
 
@@ -105,6 +105,6 @@ Deliverables:
 
 Acceptance criteria:
 
-- reviewers can reproduce builds,
+- builds are reproducible,
 - known risks are tracked,
 - cryptographic assumptions are explicit.

@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+
+# Local/editor state
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+
+# Build output
+dist/
+build/
+target/
+.build/
+node_modules/
+DerivedData/

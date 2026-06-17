@@ -124,6 +124,7 @@ See:
 - [Product Brief](docs/product-brief.md)
 - [Packages](docs/packages.md)
 - [Agent Skills](docs/agent-skills.md)
+- [E-Commerce Rewrite Plan](docs/ecommerce-rewrite-plan.md)
 - [Roadmap](docs/roadmap.md)
 - [Repository Map](docs/repository-map.md)
 - [Security Model](docs/security-model.md)

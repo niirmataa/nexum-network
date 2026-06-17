@@ -12,6 +12,23 @@ Snapshot date: 2026-06-17
 | `niirmataa/e-commerce_shop_v1` | Storefront and Nexum API integration | Public, many local changes pending commit | Split into reviewable commits |
 | `niirmataa/privAI` | Related project | Public, clean local state | Leave untouched unless needed |
 
+## Packages In This Repository
+
+| Package | Path | Purpose | Current State |
+| --- | --- | --- | --- |
+| `@nexum-network/protocol` | `packages/nexum-protocol` | Canonical JSON and payload validation | Implemented, tested |
+| `@nexum-network/fixtures` | `packages/nexum-fixtures` | Synthetic challenge/response fixtures | Implemented |
+| `@nexum-network/demo-cli` | `apps/nexum-demo-cli` | Demo payload validation/canonicalization CLI | Implemented |
+
+## Agent Skill Packs
+
+| Skill | Path | Purpose |
+| --- | --- | --- |
+| `nexum-protocol-review` | `skills/nexum-protocol-review` | Protocol review workflow |
+| `nexum-mobile-vault` | `skills/nexum-mobile-vault` | Mobile vault workflow |
+| `nexum-commerce-integration` | `skills/nexum-commerce-integration` | Storefront/API integration workflow |
+| `nexum-release-manager` | `skills/nexum-release-manager` | Release and repo cleanup workflow |
+
 ## Local-Only Workspaces
 
 | Path | Purpose | Current State | Recommendation |

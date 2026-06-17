@@ -1,0 +1,12 @@
+{
+  "name": "@nexum-network/demo-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Small CLI for inspecting Nexum protocol fixtures.",
+  "bin": {
+    "nexum-demo": "./src/cli.js"
+  },
+  "dependencies": {
+    "@nexum-network/protocol": "0.1.0"
+  }
+}

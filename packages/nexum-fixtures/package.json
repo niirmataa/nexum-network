@@ -1,0 +1,9 @@
+{
+  "name": "@nexum-network/fixtures",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Reference JSON fixtures for Nexum challenge and response flows.",
+  "exports": {
+    "./fixtures/*": "./fixtures/*"
+  }
+}

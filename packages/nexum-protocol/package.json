@@ -1,0 +1,12 @@
+{
+  "name": "@nexum-network/protocol",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Protocol primitives for Nexum challenge/response payloads.",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  }
+}

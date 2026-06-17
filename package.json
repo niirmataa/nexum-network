@@ -1,0 +1,20 @@
+{
+  "name": "nexum-network",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nexum Network protocol hub, packages, fixtures, demo tools, and agent skills.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node --test \"packages/**/*.test.js\"",
+    "check:fixtures": "node scripts/check-fixtures.mjs",
+    "check:skills": "node scripts/check-skills.mjs",
+    "verify": "npm run check:skills && npm run check:fixtures && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

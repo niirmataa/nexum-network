@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "type": "nexum.challenge",
+  "challengeId": "ch_checkout_01TEST",
+  "purpose": "checkout.approve",
+  "nonce": "Y2hlY2tvdXQtbm9uY2U",
+  "issuedAt": "2026-06-17T10:40:00Z",
+  "expiresAt": "2026-06-17T10:45:00Z",
+  "origin": "https://shop.example.com",
+  "display": {
+    "title": "Approve checkout",
+    "amount": "42.00 USD",
+    "merchant": "Example Shop"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "type": "nexum.response",
+  "challengeId": "ch_login_01TEST",
+  "keyId": "vk_device_01TEST",
+  "algorithm": "Falcon-1024",
+  "publicKey": "cHVibGljLWtleQ",
+  "signature": "c2lnbmF0dXJl",
+  "nonce": "bm9uY2U",
+  "signedAt": "2026-06-17T10:31:00Z",
+  "device": {
+    "platform": "ios",
+    "name": "Nexum Vault"
+  }
+}

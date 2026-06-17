@@ -2,7 +2,15 @@
 
 Public project hub for the Nexum Network: post-quantum signing, local vaults, QR challenge flows, transport experiments, and commerce integration patterns.
 
-This repository is a coordination and documentation layer. It keeps the system architecture, module status, security assumptions, and demo plan in one place without mixing unrelated implementation code into a single monorepo.
+This repository is a coordination layer and lightweight monorepo. It keeps shared protocol code, fixtures, demo tools, agent skills, system architecture, module status, and security assumptions in one place without dumping every implementation module into a single oversized repository.
+
+## Quick Start
+
+```bash
+npm run verify
+node apps/nexum-demo-cli/src/cli.js canonical packages/nexum-fixtures/fixtures/challenge.login.json
+node apps/nexum-demo-cli/src/cli.js validate packages/nexum-fixtures/fixtures/response.login.json
+```
 
 ## Scope
 
@@ -25,11 +33,37 @@ The current work focuses on:
 
 | Module | Repository | Status |
 | --- | --- | --- |
+| Protocol Package | `packages/nexum-protocol` | Local package, tested |
+| Fixtures Package | `packages/nexum-fixtures` | Local package, checked in CI |
+| Demo CLI | `apps/nexum-demo-cli` | Local app, validates/canonicalizes payloads |
+| Agent Skills | `skills/*` | Project-local skills for agents |
 | iOS Vault | https://github.com/lukasz82338233/nexum-vault-ios | Public, CI passing |
 | Core / Transport | https://github.com/niirmataa/nexum-core | Public, experimental, needs history sync and audit |
 | Falcon Research | https://github.com/niirmataa/free_falcon_sign | Public, research implementation |
 | Commerce Integration | https://github.com/niirmataa/e-commerce_shop_v1 | Public, local changes pending commit |
 | Falcon WASM | Local workspace only | Candidate standalone package |
+
+## Monorepo Layout
+
+```text
+apps/
+  nexum-demo-cli/          # payload validation/canonicalization helper
+packages/
+  nexum-protocol/          # canonical JSON and challenge/response validators
+  nexum-fixtures/          # synthetic protocol fixtures
+skills/
+  nexum-protocol-review/   # agent workflow for protocol changes
+  nexum-mobile-vault/      # agent workflow for iOS vault work
+  nexum-commerce-integration/
+  nexum-release-manager/
+docs/
+  agent-skills.md
+  packages.md
+  product-brief.md
+  repository-map.md
+  roadmap.md
+  security-model.md
+```
 
 ## Architecture
 
@@ -88,6 +122,8 @@ This is not a production-audited cryptographic system yet. Falcon integration, Q
 See:
 
 - [Product Brief](docs/product-brief.md)
+- [Packages](docs/packages.md)
+- [Agent Skills](docs/agent-skills.md)
 - [Roadmap](docs/roadmap.md)
 - [Repository Map](docs/repository-map.md)
 - [Security Model](docs/security-model.md)

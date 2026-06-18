@@ -9,7 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "node --test \"packages/**/*.test.js\"",
+    "test": "node --test \"packages/**/*.test.js\" \"apps/**/*.test.js\"",
+    "api:start": "node apps/nexum-api/src/server.js",
     "check:fixtures": "node scripts/check-fixtures.mjs",
     "check:skills": "node scripts/check-skills.mjs",
     "verify": "npm run check:skills && npm run check:fixtures && npm test"

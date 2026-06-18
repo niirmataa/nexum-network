@@ -36,6 +36,7 @@ packages/
   nexum-falcon-types/      # algorithm IDs, key/signature envelope types
   nexum-commerce-contract/ # checkout/login challenge helpers
 apps/
+  nexum-api/
   nexum-demo-cli/
   commerce-demo/
 skills/

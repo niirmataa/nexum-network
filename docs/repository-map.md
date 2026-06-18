@@ -18,6 +18,7 @@ Snapshot date: 2026-06-17
 | --- | --- | --- | --- |
 | `@nexum-network/protocol` | `packages/nexum-protocol` | Canonical JSON and payload validation | Implemented, tested |
 | `@nexum-network/fixtures` | `packages/nexum-fixtures` | Synthetic challenge/response fixtures | Implemented |
+| `@nexum-network/api` | `apps/nexum-api` | Challenge/response backend API | Implemented, tested |
 | `@nexum-network/demo-cli` | `apps/nexum-demo-cli` | Demo payload validation/canonicalization CLI | Implemented |
 
 ## Agent Skill Packs

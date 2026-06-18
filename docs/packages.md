@@ -25,6 +25,20 @@ Path: `apps/nexum-demo-cli`
 
 Small command-line tool for validating and canonicalizing payload fixtures.
 
+## `@nexum-network/api`
+
+Path: `apps/nexum-api`
+
+Minimal backend API for Nexum challenge/response flows.
+
+Endpoints:
+
+- `GET /health`
+- `POST /v1/challenges`
+- `POST /v1/responses/verify`
+
+The verification endpoint currently performs structural checks and returns `accepted: false` until a cryptographic verifier is wired in.
+
 ## Future Packages
 
 Planned but not yet included:

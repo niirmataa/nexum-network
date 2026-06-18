@@ -8,6 +8,7 @@ This repository is a coordination layer and lightweight monorepo. It keeps share
 
 ```bash
 npm run verify
+node apps/nexum-api/src/server.js
 node apps/nexum-demo-cli/src/cli.js canonical packages/nexum-fixtures/fixtures/challenge.login.json
 node apps/nexum-demo-cli/src/cli.js validate packages/nexum-fixtures/fixtures/response.login.json
 ```
@@ -35,6 +36,7 @@ The current work focuses on:
 | --- | --- | --- |
 | Protocol Package | `packages/nexum-protocol` | Local package, tested |
 | Fixtures Package | `packages/nexum-fixtures` | Local package, checked in CI |
+| Backend API | `apps/nexum-api` | Local app, challenge/response HTTP API |
 | Demo CLI | `apps/nexum-demo-cli` | Local app, validates/canonicalizes payloads |
 | Agent Skills | `skills/*` | Project-local skills for agents |
 | iOS Vault | https://github.com/lukasz82338233/nexum-vault-ios | Public, CI passing |
@@ -47,6 +49,7 @@ The current work focuses on:
 
 ```text
 apps/
+  nexum-api/               # backend API for challenge and response flows
   nexum-demo-cli/          # payload validation/canonicalization helper
 packages/
   nexum-protocol/          # canonical JSON and challenge/response validators
